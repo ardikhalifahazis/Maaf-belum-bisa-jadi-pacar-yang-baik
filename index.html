@@ -1,0 +1,413 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I'm Sorry, Nadin 💗</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pink: #f4a8bd;
+  --deep: #b94e70;
+  --light: #fff5f7;
+  --text: #68434f;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #fff4f7, #ffe2eb, #fff7f8);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+}
+
+.heart {
+  position: fixed;
+  bottom: -40px;
+  z-index: 0;
+  pointer-events: none;
+  animation: floatUp linear forwards;
+  opacity: 0.6;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-115vh) rotate(35deg);
+    opacity: 0;
+  }
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  width: min(90%, 600px);
+  margin: auto;
+  padding: 48px 0 35px;
+  text-align: center;
+}
+
+.tag {
+  display: inline-block;
+  padding: 9px 17px;
+  border: 1px solid #f6cada;
+  border-radius: 50px;
+  background: #ffffffa8;
+  color: var(--deep);
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 23px;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(42px, 10vw, 65px);
+  line-height: 1.12;
+  color: #b94e70;
+  font-weight: 500;
+}
+
+h1 span {
+  font-style: italic;
+  color: #e58ca9;
+}
+
+.subtitle {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #99717d;
+}
+
+.illustration {
+  margin: 27px auto 20px;
+  font-size: 74px;
+  animation: heartbeat 2s infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  10% { transform: scale(1.08); }
+  20% { transform: scale(1); }
+  30% { transform: scale(1.05); }
+}
+
+.card {
+  background: #ffffffc9;
+  border: 1px solid #f9d5e0;
+  border-radius: 25px;
+  padding: 29px 24px;
+  box-shadow: 0 15px 45px #d990a51a;
+  text-align: left;
+  margin-top: 25px;
+}
+
+.card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  font-weight: 500;
+  color: #b94e70;
+  margin-bottom: 17px;
+}
+
+.card p {
+  font-size: 14px;
+  line-height: 1.95;
+  margin-bottom: 13px;
+}
+
+.signature {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-style: italic;
+  color: #bd5879;
+  margin-top: 23px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  transition: transform .2s, background .2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+.primary {
+  width: 100%;
+  background: linear-gradient(135deg, #e98eaa, #c95c80);
+  color: white;
+  padding: 16px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 8px 20px #d87c9c35;
+  margin-top: 19px;
+}
+
+.secondary {
+  background: white;
+  color: #b94e70;
+  border: 1px solid #f3c8d6;
+  border-radius: 14px;
+  padding: 13px 20px;
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+.hidden {
+  display: none;
+}
+
+.extra {
+  animation: appear .7s ease both;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 23px 0;
+  color: #d48aa2;
+  font-size: 12px;
+}
+
+.divider:before, .divider:after {
+  content: "";
+  height: 1px;
+  background: #f1c9d6;
+  flex: 1;
+}
+
+.note {
+  background: #fff0f4;
+  padding: 18px;
+  border-radius: 16px;
+  font-size: 13px;
+  line-height: 1.9;
+  margin-top: 18px;
+}
+
+footer {
+  font-size: 11px;
+  color: #bd8c9c;
+  margin-top: 28px;
+  line-height: 1.8;
+}
+
+#finalMessage {
+  font-family: 'Playfair Display', serif;
+  color: #b94e70;
+  font-size: 22px;
+  line-height: 1.6;
+  margin-top: 18px;
+}
+
+</style>
+</head>
+
+<body>
+
+<main class="container">
+
+  <div class="tag">A LITTLE LETTER FOR YOU 💌</div>
+
+  <h1>I'm Sorry,<br><span>My Nadin.</span></h1>
+
+  <p class="subtitle">
+    Ada sesuatu yang pengen aku sampaikan dari hati.<br>
+    Jadi, boleh luangin waktu sebentar buat baca ini?
+  </p>
+
+  <div class="illustration">💗</div>
+
+  <section class="card">
+    <h2>Dear Nadin,</h2>
+
+    <p>
+      Sayang, aku mau minta maaf ya. Maaf kalau sikap,
+      perkataan, atau perbuatanku udah bikin kamu sedih,
+      kecewa, kesel, atau ngerasa nggak dihargai.
+    </p>
+
+    <p>
+      Aku sadar kalau sayang sama seseorang itu bukan
+      cuma tentang bilang cinta, tapi juga tentang gimana
+      aku memperlakukan dia, mendengarkan perasaannya,
+      dan belajar dari kesalahan sendiri.
+    </p>
+
+    <p>
+      Aku nggak mau cuma minta maaf supaya masalahnya
+      cepat selesai. Aku mau benar-benar memahami apa
+      yang bikin kamu terluka dan berusaha memperbaiki
+      bagian dari diriku yang masih kurang.
+    </p>
+
+    <p>
+      Kamu berharga buat aku, Nad. Perasaan kamu penting,
+      dan aku nggak mau menganggapnya sepele.
+      Aku mungkin belum selalu bisa jadi pasangan yang
+      sempurna, tapi aku mau terus belajar jadi lebih baik.
+    </p>
+
+    <p>
+      Aku tahu kata maaf aja nggak cukup kalau nggak
+      dibarengi perubahan. Jadi aku mau berusaha
+      membuktikannya lewat sikap, bukan sekadar janji.
+    </p>
+
+    <p>
+      Maaf ya, sayang. Makasih karena udah jadi seseorang
+      yang berarti di hidup aku. ❤️
+    </p>
+
+    <div class="signature">
+      With love and a sincere apology,<br>
+      Your Ardi ♡
+    </div>
+
+    <button class="primary" onclick="showExtra()">
+      There's more I want to say 💌
+    </button>
+  </section>
+
+  <section id="extra" class="card hidden extra">
+    <h2>One more thing... 🌷</h2>
+
+    <p>
+      Aku nggak berharap kamu harus langsung baik-baik
+      aja atau langsung memaafkan aku. Kalau kamu masih
+      butuh waktu, aku akan berusaha menghargainya.
+    </p>
+
+    <p>
+      Aku juga mau dengerin kamu. Aku mau ngerti sudut
+      pandang kamu tanpa buru-buru membela diri.
+      Karena hubungan ini bukan tentang siapa yang
+      menang dalam sebuah masalah, tapi tentang
+      gimana kita bisa saling memahami.
+    </p>
+
+    <div class="divider">A little promise ♡</div>
+
+    <div class="note">
+      Aku mau belajar lebih sabar, lebih peka,
+      lebih terbuka, dan lebih bertanggung jawab
+      atas sikapku sendiri. Aku nggak mau berhenti
+      di kata maaf. Aku mau ada usaha nyata setelahnya.
+      <br><br>
+      <strong>I'm sorry, Nadin. You matter to me. 🤍</strong>
+    </div>
+
+    <button class="primary" onclick="showFinal()">
+      One last message for you 🩷
+    </button>
+  </section>
+
+  <section id="final" class="card hidden extra">
+    <div style="text-align:center">
+      <div style="font-size:55px">🧸💗</div>
+
+      <h2 style="margin-top:15px">For My Favorite Person</h2>
+
+      <p>
+        Apa pun yang kamu rasakan sekarang, kamu nggak
+        harus buru-buru menjelaskannya. Kalau kamu siap,
+        aku di sini buat mendengarkan.
+      </p>
+
+      <div id="finalMessage">
+        I'm truly sorry, Nadin. ♡
+      </div>
+
+      <button class="secondary" onclick="makeHearts()">
+        Send you some love ♡
+      </button>
+    </div>
+  </section>
+
+  <footer>
+    made with a sincere heart ♡<br>
+    for Nadin, from Ardi
+  </footer>
+
+</main>
+
+<script>
+function showExtra() {
+  const section = document.getElementById('extra');
+  section.classList.remove('hidden');
+  section.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+}
+
+function showFinal() {
+  const section = document.getElementById('final');
+  section.classList.remove('hidden');
+  section.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+  makeHearts();
+}
+
+function makeHearts() {
+  const symbols = ['💗', '💕', '♡', '💖', '🌸'];
+
+  for (let i = 0; i < 24; i++) {
+    setTimeout(() => {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.textContent =
+        symbols[Math.floor(Math.random() * symbols.length)];
+
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.fontSize = (14 + Math.random() * 22) + 'px';
+      heart.style.animationDuration = (4 + Math.random() * 4) + 's';
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 8500);
+    }, i * 100);
+  }
+}
+
+setInterval(() => {
+  if (Math.random() > 0.45) {
+    makeSmallHeart();
+  }
+}, 1400);
+
+function makeSmallHeart() {
+  const heart = document.createElement('div');
+  heart.className = 'heart';
+  heart.textContent = Math.random() > 0.5 ? '♡' : '♥';
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.fontSize = (12 + Math.random() * 15) + 'px';
+  heart.style.animationDuration = (6 + Math.random() * 5) + 's';
+
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 11000);
+}
+</script>
+
+</body>
+</html>
